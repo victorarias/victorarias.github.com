@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0;}
+@font-face {
+	font-family: gentium;
+	src: url('fonts/Gentium_Basic/GenBasB.eot');
+	src: url('fonts/Gentium_Basic/GenBasB.ttf') format('truetype');
+}
+
+/*geral */
+html{background: url('images/bg.gif') #969488;}
+body{color:#2a2921;font-family:Minion Pro, gentium, serif; min-height:930px;}
+
+/* header */
+header{display: block; height: 220px; padding: 10px;}
+header h1{overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px; font-size:72px;}
+p{font-size:16px; overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px;}
+h1 {margin: 75px 75px 15px 75px; height:80px;font-size:68px;}
+
+
+/* section - links */
+
+section#container {}
+
+ul#nav {margin:0 0 10px 0; text-align:center;}
+	ul#nav li {display: inline; margin:10px;}
+	ul#nav li a {border: none;}
+	
+ul#nav li a img {border:none;
+	opacity: 0.25;
+	filter: alpha(opacity=25);
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-o-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	}
+ul#nav li a:hover img, ul#nav li a:focus img {
+	opacity: 1;
+	filter: alpha(opacity=100);}
