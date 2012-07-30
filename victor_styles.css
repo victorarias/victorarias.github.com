@@ -10,7 +10,7 @@
 
 /*geral */
 html{background: url('images/bg.gif') #969488;}
-body{color:#2a2921;font-family:Minion Pro, gentium, serif; min-height:930px;}
+body{color:#2a2921;font-family:Minion Pro, gentium, serif;}
 
 /* header */
 header{display: block; height: 220px; padding: 10px;}
