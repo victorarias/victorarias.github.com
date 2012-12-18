@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 
 *{margin:0; padding:0;}
 @font-face {
@@ -8,26 +7,19 @@
 	src: url('fonts/Gentium_Basic/GenBasB.ttf') format('truetype');
 }
 
-/*geral */
 html{background: url('images/bg.gif') #969488;}
 body{color:#2a2921;font-family:Minion Pro, gentium, serif;}
 
-/* header */
-header{display: block; height: 220px; padding: 10px;}
-header h1{overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px; font-size:72px;}
-p{font-size:16px; overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px;}
-h1 {margin: 75px 75px 15px 75px; height:80px;font-size:68px;}
+body > header {display: block; padding: 10px;}
+body > header h1 {overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px; font-size:72px; margin: 10px 75px 15px 75px; height:80px;}
+body > header p {font-size:16px; overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px;}
 
-
-/* section - links */
-
-section#container {}
-
-ul#nav {margin:0 0 10px 0; text-align:center;}
-	ul#nav li {display: inline; margin:10px;}
-	ul#nav li a {border: none;}
+body > footer ul#nav {margin-top: 1.5em; text-align:center;}
+body > footer	ul#nav li {display: inline; margin:10px;}
+body > footer	ul#nav li a {border: none;}
 	
-ul#nav li a img {border:none;
+body > footer ul#nav li a img {border:none;
+  height: 30px;
 	opacity: 0.25;
 	filter: alpha(opacity=25);
 	-webkit-transition: opacity 0.2s ease-in-out;
@@ -35,6 +27,19 @@ ul#nav li a img {border:none;
 	-o-transition: opacity 0.2s ease-in-out;
 	transition: opacity 0.2s ease-in-out;
 	}
-ul#nav li a:hover img, ul#nav li a:focus img {
+
+body > footer ul#nav li a:hover img, ul#nav li a:focus img {
 	opacity: 1;
 	filter: alpha(opacity=100);}
+
+section#container {
+  font-size: 110%;
+  text-align: justify;
+  width:42em;
+  margin: 1em auto 2em auto;
+  line-height: 1.5em;
+}
+
+section#container h1{ margin: 0 0 1em 0; }
+
+ul.posts span.date { color: #D4D4D4; font-size:90%; } 
