@@ -3,8 +3,8 @@
 *{margin:0; padding:0;}
 @font-face {
 	font-family: gentium;
-	src: url('fonts/Gentium_Basic/GenBasB.eot');
-	src: url('fonts/Gentium_Basic/GenBasB.ttf') format('truetype');
+	src: url('/fonts/Gentium_Basic/GenBasB.eot');
+	src: url('/fonts/Gentium_Basic/GenBasB.ttf') format('truetype');
 }
 
 html{background: url('images/bg.gif') #969488;}
