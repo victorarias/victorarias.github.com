@@ -43,3 +43,7 @@ section#container {
 section#container h1{ margin: 0 0 1em 0; }
 
 ul.posts span.date { color: #D4D4D4; font-size:90%; } 
+
+section#post h1 { font-size: 110%; }
+section#post p.date { color: #d4d4d4; font-size:80% }
+section#post p { margin: 1em 0; font-size:90%; }
