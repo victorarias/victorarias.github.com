@@ -17,9 +17,28 @@ h1{font-family:"gentium", serif;}
 a {text-decoration:none; color:#2A2921;}
 a:hover{color:#787878;}
 
-body > header {display: block; padding: 10px;}
-body > header h1 {overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px; font-size:72px; margin: 10px 75px 15px 75px; height:80px;}
-body > header p {font-size:16px; overflow:hidden; text-align:center;color:#2a2921;text-shadow:#a1a3a6 1px 1px;}
+body > header {
+  display: block; 
+  padding: 0.5em;
+}
+
+body > header h1 {
+  overflow:hidden; 
+  text-align:center;
+  color:#2a2921;
+  text-shadow:#a1a3a6 1px 1px; 
+  font-size:4.5em; 
+  height:1.3em;
+  margin-top:0.2em;
+}
+
+body > header p {
+  font-size:1em; 
+  overflow:hidden; 
+  text-align:center;
+  color:#2a2921;
+  text-shadow:#a1a3a6 1px 1px;
+}
 
 #menu ul { margin-top: 1.5em; text-align: center;}
 #menu li { display: inline; border-right:1px solid #2A2921; padding:0 1em; }
