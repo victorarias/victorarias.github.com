@@ -3,8 +3,8 @@
 *{margin:0; padding:0;}
 @font-face {
 	font-family: gentium;
-	src: url('/fonts/Gentium_Basic/GenBasB.eot');
-	src: url('/fonts/Gentium_Basic/GenBasB.ttf') format('truetype');
+	src: url('/fonts/gentium_basic/GenBasB.eot');
+	src: url('/fonts/gentium_basic/GenBasB.ttf') format('truetype');
 }
 
 html{background: url('images/bg.gif') #969488;}
@@ -43,11 +43,11 @@ section#container {
 
 section#container h1{ margin: 0 0 1em 0; }
 
-ul.posts span.date { color: #D4D4D4; font-size:90%; } 
+ul.posts span.date { color: #717171; font-size:90%; } 
 
 section#post {
   background-color:#f3f3f3;
-  border: 0.2em solid #ffffff;
+  border: 0.1em solid #ffffff;
   padding: 0.5em;
   font-size: 120%;
 }
@@ -59,5 +59,5 @@ section#post p { margin: 1em 0; font-size:90%; }
   background-color:#f3f3f3;
   margin-top: 2em;
   padding: 1em;
-  border: 0.2em solid #ffffff;
+  border: 0.1em solid #ffffff;
 }
