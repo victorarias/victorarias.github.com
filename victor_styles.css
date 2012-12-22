@@ -35,15 +35,29 @@ body > footer ul#nav li a:hover img, ul#nav li a:focus img {
 section#container {
   font-size: 110%;
   text-align: justify;
-  width:42em;
+  width:55em;
   margin: 1em auto 2em auto;
   line-height: 1.5em;
+  font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
 section#container h1{ margin: 0 0 1em 0; }
 
 ul.posts span.date { color: #D4D4D4; font-size:90%; } 
 
+section#post {
+  background-color:#f3f3f3;
+  border: 0.2em solid #ffffff;
+  padding: 0.5em;
+  font-size: 120%;
+}
 section#post h1 { font-size: 110%; }
 section#post p.date { color: #d4d4d4; font-size:80% }
 section#post p { margin: 1em 0; font-size:90%; }
+
+#disqus_thread{
+  background-color:#f3f3f3;
+  margin-top: 2em;
+  padding: 1em;
+  border: 0.2em solid #ffffff;
+}
