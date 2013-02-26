@@ -15,7 +15,7 @@ So, what’s the problem? Relational data! Well, not only that, but let’s talk
 
 We have five main entities: Chain, Store, Edition, Order and User. Below is a diagram that summarizes the relationship between these entities.
 
-<img class="center" src="/images/2013-02-26/1.png" alt="diagram"/>
+<img class="center simple-border" src="/images/2013-02-26/1.png" alt="diagram"/>
 
 The application was firstly modelled this way because it’s the way the data is consumed and “flows” on the user interface, and also because this design meets the needs of the user in a leaner way. It’s also important to note that this modeling fits naturally with MongoDB.
 
