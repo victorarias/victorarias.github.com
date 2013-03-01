@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Right Tool For The Job
+keywords: "mongodb,postgresql,mysql,relational,rails,denormalization,transactions"
 ---
 
 #{{ page.title}}

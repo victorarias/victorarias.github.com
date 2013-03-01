@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Do You Sharpen Your Saw?
+keywords: ",coding,algorithms,F#,code design,oo,object orientation,functional,tests,design patterns,agile, lean"
 ---
 
 #{{ page.title }}
