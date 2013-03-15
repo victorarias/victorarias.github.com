@@ -9,6 +9,8 @@ gist_id: "ece1fd75090c2a7ffe72"
 
 <p class="date">25 Mar 2013 - São Paulo</p>
 
+First of all, [here is the demo.](/demo/event-driven-simulation/cool_index.html)
+
 I’m attending the Algorithms 1 course on Coursera, from professors Robert Sedgewick and Kevin Wayne, and so far it’s been great. It’s nice to remember and improve my knowledge in algorithms while coding solutions to unusual problems like the 8-puzzle problem (solved using the A* algorithm), and all of that for free! :-) This post is inspired on one of the applications of priorities queues: event driven simulations.
 
 After studying sorting algorithms (selection, insertion, shell, merge, quick and heap sort) we were briefly exposed to collision simulation and its naïve O(n^2) and improved O(lg N) solutions.
@@ -74,3 +76,5 @@ The result is that the cool solution can actually handle much more particles in 
 Coding these algorithms was a fun and very rewarding job. I’m a fan of deliberate practice as a technique of skill improving and this was a perfect example of it: a well-defined task, challenging but doable with easy feedback and a lot of opportunity to correct errors.
 
 I must thank Coursera for the opportunity of taking these classes for free. Sincerely, I would pay for this kind of knowledge and exposure. I’m anxious to complete this course and start its second part! 
+
+[Link to the demo.](/demo/event-driven-simulation/cool_index.html)
