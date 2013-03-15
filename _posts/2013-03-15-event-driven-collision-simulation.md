@@ -9,7 +9,6 @@ gist_id: "ece1fd75090c2a7ffe72"
 
 <p class="date">25 Mar 2013 - São Paulo</p>
 
-<a class="btn" target="_blank" href="/demo/event-driven-simulation/cool_index.html">Demo</a>
 
 I’m attending the Algorithms 1 course on Coursera, from professors Robert Sedgewick and Kevin Wayne, and so far it’s been great. It’s nice to remember and improve my knowledge in algorithms while coding solutions to unusual problems like the 8-puzzle problem (solved using the A* algorithm), and all of that for free! :-) This post is inspired on one of the applications of priorities queues: event driven simulations.
 
@@ -37,7 +36,19 @@ Just by reading my code now I remembered five topics that it can be tricky:
 
 So, let’s go to the code. It can be found in this repository: [https://github.com/victorarias/collision_system](https://github.com/victorarias/collision_system)
 
-The main files are listed above:
+Below is a picture of the running code:
+
+<div class="thumb">
+  <a href="/images/2013-03-15/1.png" target="_blank">
+    <img class="center simple-border" src="/images/2013-03-15/1.png" alt="screenshot"/>
+  </a>
+
+  <p>
+    <a class="btn" target="_blank" href="/demo/event-driven-simulation/cool_index.html">Demo</a>
+  </p>
+</div>
+
+The main files are listed below:
 -	priority_queue.js: data structure that enables the cool solution.
 -	circle.js: type to represent a circle on the canvas.
 -	collision_system.js: base type to run startup code and the main update+drawing code.
@@ -45,9 +56,7 @@ The main files are listed above:
 -	cool_collision_system.js: O(lg n) implementation
 -	profiler.js: type to “hijack” functions and measure performance (just a simple arithmetic average)
 
-Below is a picture of the running code:
 
-<img class="center simple-border" src="/images/2013-03-15/1.png" alt="screenshot"/>
 
 Let’s take a look at the commented implementation of both implementations:
 
@@ -76,5 +85,3 @@ The result is that the cool solution can actually handle much more particles in 
 Coding these algorithms was a fun and very rewarding job. I’m a fan of deliberate practice as a technique of skill improving and this was a perfect example of it: a well-defined task, challenging but doable with easy feedback and a lot of opportunity to correct errors.
 
 I must thank Coursera for the opportunity of taking these classes for free. Sincerely, I would pay for this kind of knowledge and exposure. I’m anxious to complete this course and start its second part! 
-
-<a class="btn" target="_blank" href="/demo/event-driven-simulation/cool_index.html">Demo</a>
