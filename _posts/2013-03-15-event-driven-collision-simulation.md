@@ -36,7 +36,7 @@ Just by reading my code now I remembered five topics that it can be tricky:
 
 So, let’s go to the code. It can be found in this repository: [https://github.com/victorarias/collision_system](https://github.com/victorarias/collision_system)
 
-Below is a picture of the running code:
+Below is a picture of the running code and a link to the demo:
 
 <div class="thumb">
   <a href="/images/2013-03-15/1.png" target="_blank">
