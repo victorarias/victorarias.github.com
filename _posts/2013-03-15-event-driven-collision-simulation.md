@@ -9,7 +9,7 @@ gist_id: "ece1fd75090c2a7ffe72"
 
 <p class="date">25 Mar 2013 - São Paulo</p>
 
-First of all, [here is the demo.](/demo/event-driven-simulation/cool_index.html)
+<a class="btn" target="_blank" href="/demo/event-driven-simulation/cool_index.html">Demo</a>
 
 I’m attending the Algorithms 1 course on Coursera, from professors Robert Sedgewick and Kevin Wayne, and so far it’s been great. It’s nice to remember and improve my knowledge in algorithms while coding solutions to unusual problems like the 8-puzzle problem (solved using the A* algorithm), and all of that for free! :-) This post is inspired on one of the applications of priorities queues: event driven simulations.
 
@@ -77,4 +77,4 @@ Coding these algorithms was a fun and very rewarding job. I’m a fan of deliber
 
 I must thank Coursera for the opportunity of taking these classes for free. Sincerely, I would pay for this kind of knowledge and exposure. I’m anxious to complete this course and start its second part! 
 
-[Link to the demo.](/demo/event-driven-simulation/cool_index.html)
+<a class="btn" target="_blank" href="/demo/event-driven-simulation/cool_index.html">Demo</a>
