@@ -15,7 +15,7 @@ After studying sorting algorithms (selection, insertion, shell, merge, quick and
 
 Since the improved solution is SO MUCH better in theory, I decided to try it myself, implementing both solutions with JavaScript on a HTML5 Canvas, a technology that I always wanted to use but had never found an opportunity.
 
-Both implementations use the same structure of initialization/resource/drawing/warmup but they differ mostly on its update mechanism: the function responsible for calculating collisions between circles and walls and then moving them based on its direction and speed.
+Both implementations use the same structure of *initialization/resource/drawing/warmup* but they differ mostly on its update mechanism: the function responsible for calculating collisions between circles and walls and then moving them based on its direction and speed.
 
 The simplistic approach uses a O(n^2) loop to check for collisions between every single particle since every one of them is a candidate to be at the same place at the same time, and only after that the postioning is calculated.
 

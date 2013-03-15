@@ -88,6 +88,7 @@ section#post { margin: 1em 0; font-size:90%; }
 section#post ul, section#post ol { margin: 20px 20px; }
 section#post li { padding-left: 10px; }
 section#post img { max-width: 100%; }
+section#post a { font-style: italic; }
 
 #disqus_thread{
   background-color:#f3f3f3;
