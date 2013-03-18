@@ -17,7 +17,7 @@ The simplistic approach uses a O(n^2) loop to check for collisions between every
 
 The event driven approach has a very different 	nature: its strategy is to predict collisions, keeping them in order and executing them one by one. This approach is powered by a priority queue that has both insert and remove operations with O(lg N) time.
 
-Even having these solutions written in other languages and platforms they wasn’t easy to implement, mainly because of the language. Don’t get me wrong: JavaScript is a great language, but it has so many “gotchas” that it took me a week of “freetime coding” to accomplish a bug-free solution.
+Even having these solutions written in other languages and platforms they weren’t easy to implement, mainly because of the language. Don’t get me wrong: JavaScript is a great language, but it has so many “gotchas” that it took me a week of “freetime coding” to accomplish a bug-free solution.
 
 People tend to praise JavaScript and even put down who criticize its problems, but I personally think that this is a childish behavior. I acknowledge JavaScript importance and I know that is possible to achieve great things with it, but no one can say that it isn’t unnecessarily hard to write complex systems with it.
 
