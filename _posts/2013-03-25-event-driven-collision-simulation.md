@@ -3,12 +3,8 @@ layout: post
 title: Event Driven Collision Simulation
 keywords: ",algorithms,javascript,coursera,canvas,html5,priority queue"
 gist_id: "ece1fd75090c2a7ffe72"
+location: São Paulo
 ---
-
-#{{ page.title }}
-
-<p class="date">25 Mar 2013 - São Paulo</p>
-
 
 I’m attending the Algorithms 1 course on Coursera, from professors Robert Sedgewick and Kevin Wayne, and so far it’s been great. It’s nice to remember and improve my knowledge in algorithms while coding solutions to unusual problems like the 8-puzzle problem (solved using the A* algorithm), and all of that for free! :-) This post is inspired on one of the applications of priorities queues: event driven simulations.
 

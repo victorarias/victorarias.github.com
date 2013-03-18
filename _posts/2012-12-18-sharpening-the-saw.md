@@ -2,11 +2,8 @@
 layout: post
 title: Do You Sharpen Your Saw?
 keywords: ",coding,algorithms,F#,code design,oo,object orientation,functional,tests,design patterns,agile, lean"
+location: São Paulo
 ---
-
-#{{ page.title }}
-
-<p class="date">18 Dec 2012 - São Paulo</p>
 
 What do you do to improve yourself? Do you do something to perform well at work, to delivery better software in less time?
 
