@@ -14,7 +14,7 @@ FP isn’t intrinsically hard – what makes it difficult is our “software dev
 
 When I said it’s worth it, it’s because functional programming is about concise, beautiful and powerful code. It makes your code smaller and so more effective and less error prone, and with less code you achieve easier maintainability. Furthermore, FP makes it easier to write parallel code replacing  mutability and loops with functions and composition. As you master the functional way of thinking you’ll get a boost in productivity and happiness out of the succinctness, compositionality and clarity of your code.
 
-I decided to write this small blog post because during this week *[Martin Odersky FP course on Coursera](https://www.coursera.org/course/progfun)* has restarted! I regret not doing the course the last time it took place, so I couldn’t let it go one more time :-D
+I decided to write this small blog post because during this week **[Martin Odersky FP course on Coursera](https://www.coursera.org/course/progfun)** has restarted! I regret not doing the course the last time it took place, so I couldn’t let it go one more time :-D
 
 I’ve closely watched some peers during the last course execution and I’m sure that it’ll be very rewarding. It starts with basics concepts and finishes with advanced computer science topics, and I’m very anxious about the challenge ;-)
 
