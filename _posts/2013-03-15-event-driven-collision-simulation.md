@@ -7,7 +7,7 @@ location: São Paulo
 
 I’m attending the Algorithms 1 course on Coursera, from professors Robert Sedgewick and Kevin Wayne, and so far it’s been great. It’s nice to remember and improve my knowledge in algorithms while coding solutions to unusual problems like the 8-puzzle problem (solved using the A* algorithm), and all of that for free! :-) This post is inspired on one of the applications of priorities queues: event driven simulations.
 
-After studying sorting algorithms (selection, insertion, shell, merge, quick and heap sort) we were briefly exposed to collision simulation and its naïve O(n^2) and improved O(lg N) solutions.
+After studying sorting algorithms (selection, insertion, shell, merge, quick and heap sort) we were briefly exposed to collision simulation and its naïve O(n^2) and improved O(n lg N) solutions.
 
 Since the improved solution is SO MUCH better in theory, I decided to try it myself, implementing both solutions with JavaScript on a HTML5 Canvas, a technology that I always wanted to use but had never found an opportunity.
 
@@ -48,7 +48,7 @@ The main files are listed below:
 -	circle.js: type to represent a circle on the canvas.
 -	collision_system.js: base type to run startup code and the main update+drawing code.
 -	simple_collision_system.js: O(n^2) implementation
--	cool_collision_system.js: O(lg n) implementation
+-	cool_collision_system.js: O(n lg n) implementation
 -	profiler.js: type to “hijack” functions and measure performance (just a simple arithmetic average)
 
 
@@ -65,7 +65,7 @@ These implementations have very different performance considerations. Let’s lo
 
 - Number of particles: 1000
 - Simple 0(n^2) implementation: ~25 FPS
-- Cool O(lg n) implementation: ~58 FPS
+- Cool O(n lg n) implementation: ~58 FPS
 
 These aren’t impressive numbers, right? On my machine 1000 particles is the point that the simplistic solution is at its limit: the browser can’t hold the animation above this. This is expected on the simplistic solution, however I expected a different result from the cool solution – at least this was what I thought when I first saw the numbers.
 
