@@ -9,6 +9,8 @@ location: São Paulo
 
 I was inspired by the book ["Pragmatic Thinking and Learning" by Andy Hunt](http://pragprog.com/book/ahptl/pragmatic-thinking-and-learning) that I've read not so long ago and so I decided to write this post which you may say it is almost a review of this book. My intention with this is to show you how you could improve your ability of learning, which is required specially to software developers considering that we need to learn constantly not only technical stuff but also problems domains, and doing this is extremely hard and tiring. I personally think that the common developer (and may not be only developers) overlook this topic. Learning is a skill as programming and riding a bicycle is and so it deserves attention, training, reflection, etc.
 
+<!-- more -->
+
 First of all we need to understand our behaviour, and a good way of doing it is to go through a model of expertise: the Dreyfus model. It proposes a skill acquisition model and a way to move from beginning levels to mastery of a skill (aka being an expert).
 After that, we need to understand better our mind to then be able to find ways to learn effectively and catch cognitive biases. Even though I'm not an expert I'll try to write about how our mind works (and how it doesn't), learning techniques and ways to improve usual activities like reading. With time I’d like to have here a nice list of techniques, tips and habits about learning.
 

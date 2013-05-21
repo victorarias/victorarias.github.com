@@ -7,6 +7,8 @@ location: São Paulo
 
 What do you do to improve yourself? Do you do something to perform well at work, to delivery better software in less time?
 
+<!-- more -->
+
 In the day-to-day routine is easy to lose yourself. Our job is usually very time-consuming and many different aspects of life (feeding the cats, walking the dog, etc.) leave us with almost no time to improve ourselves. This normally leads to obsolescence, lack of interest and other bad things. 
 
 What people and some companies usually don't realize is that spending time practicing and studying leads to greater productivity, so at the end of the day spending time not working can make you more productive – it’s obvious, but true. It is like the story of the lumberjack that was so busy sawing with a dull saw that he had no time to sharpen it. ([Codding Horror - Sharpening The Saw](http://www.codinghorror.com/blog/2009/03/sharpening-the-saw.html))

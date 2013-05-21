@@ -8,6 +8,8 @@ location: São Paulo
 
 It’s simple: because it might make you a better programmer. 
 
+<!-- more -->
+
 From the beginning: The process of learning the functional paradigm makes you “mentally” sweat. It’s hard and can make you give up. Hell, it can even make you fall in the cognitive trap that “FP is the only way”. But bear with me: it is worth it.
 
 FP isn’t intrinsically hard – what makes it difficult is our “software developer” brain. We are already wired to think in an imperative and object oriented way and this is the main obstacle. What people should do is temporally forget how to program, but this is easier said than done.

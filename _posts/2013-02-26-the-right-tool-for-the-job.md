@@ -7,6 +7,8 @@ location: São Paulo
 
 I’ve been working on a new project for the past three weeks: It’s a kind of an e-commerce that sells advertisement space. The reason that motivated this post was the database chosen: MongoDB.
 
+<!-- more -->
+
 We used MongoDB successfully in many other projects, mainly because it’s faster to develop new features with it than with other databases like MySQL or PostgreSQL. The reason that it’s faster to implement and ship new features is because we don’t need to handle migrations or table structures, and even with Rails this can be a pain. What is more, at the end the MVP (Minimum Viable Product) was a success! We’ve shipped the app in a short period and the client was impressed!
 
 So, what’s the problem? Relational data! Well, not only that, but let’s talk about it first.

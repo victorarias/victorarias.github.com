@@ -7,6 +7,8 @@ location: São Paulo
 
 I’m attending the Algorithms 1 course on Coursera, from professors Robert Sedgewick and Kevin Wayne, and so far it’s been great. It’s nice to remember and improve my knowledge in algorithms while coding solutions to unusual problems like the 8-puzzle problem (solved using the A* algorithm), and all of that for free! :-) This post is inspired on one of the applications of priorities queues: event driven simulations.
 
+<!-- more -->
+
 After studying sorting algorithms (selection, insertion, shell, merge, quick and heap sort) we were briefly exposed to collision simulation and its naïve O(n^2) and improved O(n lg N) solutions.
 
 Since the improved solution is SO MUCH better in theory, I decided to try it myself, implementing both solutions with JavaScript on a HTML5 Canvas, a technology that I always wanted to use but had never found an opportunity.
