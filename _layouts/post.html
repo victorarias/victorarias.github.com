@@ -4,13 +4,27 @@ comments: true
 ---
 
 <section id="post">
-	<header>
-		<h1>{{ page.title }}</h1>
+	<article class="entry-post">
+		<div class="entry-title">
+			<h1>{{ page.title }}</h1>
+			<time datetime="{{ page.date }}" pubdate>{{ page.date | date: "%d %b %Y" }} - {{ page.location }}</time>
+		</div>
 
-		<time datetime="{{ page.date }}" pubdate>{{ page.date | date: "%d %b %Y" }} - {{ page.location }}</time>
-	</header>
-	<article>
-		{{ content }}
+		<div class="entry-content">
+			<ul id="share">
+				<li class="text">Share this:</li>
+      	<li class="img"><a href="https://twitter.com/share" target="blank"><img src="/images/twitter.png" alt="Share this on Twitter" title="Share this on Twitter"></a></li>
+      	<li class="img"><a href=""><img src="/images/facebook.png" alt="Share this on Facebook" title="Share this on Facebook"></a></li>
+	    </ul>
+		  <div class="clear">
+				{{ content }}
+		  </div>
+			<ul id="share">
+				<li class="text">Share this:</li>
+      	<li class="img"><a href="https://twitter.com/share" target="blank"><img src="/images/twitter.png" alt="Share this on Twitter" title="Share this on Twitter"></a></li>
+      	<li class="img"><a href=""><img src="/images/facebook.png" alt="Share this on Facebook" title="Share this on Facebook"></a></li>
+	    </ul>		  
+		</div>
 	</article>
 </section>
 
