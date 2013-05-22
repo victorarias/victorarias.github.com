@@ -1,31 +1,30 @@
 ---
 layout: default
-comments: true
 ---
 
 <section id="post">
-	<article class="entry-post">
-		<div class="entry-title">
-			<h1>{{ page.title }}</h1>
-			<time datetime="{{ page.date }}" pubdate>{{ page.date | date: "%d %b %Y" }} - {{ page.location }}</time>
-		</div>
+  <article class="entry-post">
+    <div class="entry-title">
+      <h1>{{ page.title }}</h1>
+      <time datetime="{{ page.date }}" pubdate>{{ page.date | date: "%d %b %Y" }} - {{ page.location }}</time>
+    </div>
 
-		<div class="entry-content">
-			<ul id="share">
-				<li class="text">Share this:</li>
-      	<li class="img"><a href="https://twitter.com/share" target="blank"><img src="/images/twitter.png" alt="Share this on Twitter" title="Share this on Twitter"></a></li>
-      	<li class="img"><a href=""><img src="/images/facebook.png" alt="Share this on Facebook" title="Share this on Facebook"></a></li>
-	    </ul>
-		  <div class="clear">
-				{{ content }}
-		  </div>
-			<ul id="share">
-				<li class="text">Share this:</li>
-      	<li class="img"><a href="https://twitter.com/share" target="blank"><img src="/images/twitter.png" alt="Share this on Twitter" title="Share this on Twitter"></a></li>
-      	<li class="img"><a href=""><img src="/images/facebook.png" alt="Share this on Facebook" title="Share this on Facebook"></a></li>
-	    </ul>		  
-		</div>
-	</article>
+    <div class="entry-content">
+     <ul class="share">
+        <li class="text">Share this:</li>
+        <li class="img"><a target="_blank" href="http://twitter.com/home?status={{ page.title | cgi_escape }} ~ {{ page.short_url}}"><img src="/images/twitter.png" alt="Share this on Twitter" title="Share this on Twitter"></a></li>
+        <li class="img"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ page.short_url}}"><img src="/images/facebook.png" alt="Share this on Facebook" title="Share this on Facebook"></a></li>
+      </ul>
+      <div class="clear">
+        {{ content }}
+      </div>
+      <ul class="share">
+        <li class="text">Share this:</li>
+         <li class="img"><a target="_blank" href="http://twitter.com/home?status={{ page.title | cgi_escape }} ~ {{ page.short_url}}"><img src="/images/twitter.png" alt="Share this on Twitter" title="Share this on Twitter"></a></li>
+	        <li class="img"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ page.short_url }}"><img src="/images/facebook.png" alt="Share this on Facebook" title="Share this on Facebook"></a></li>
+      </ul>		  
+    </div>
+  </article>
 </section>
 
 {{ % if page.comments % }}
@@ -35,9 +34,9 @@ comments: true
 var disqus_shortname = 'victorarias'; // required: replace example with your forum shortname
 
 (function() {
-	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

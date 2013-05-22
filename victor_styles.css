@@ -118,13 +118,13 @@ body > header h2 {
 
     .gist {font-size: .7em;}
 
-    ul#share {
+    ul.share {
     margin:0;
     float: right;
     background: #20b0ca;
     padding: 0.5em;}
 
-    ul#share li {
+    ul.share li {
       color: #fff;
       display: inline;
       margin:0;}
@@ -132,7 +132,7 @@ body > header h2 {
     ul#share li.text {margin-right: 10px;}
     ul#share li.img {margin-top: 10px;}
 
-    ul#share li a img {
+    ul.share li a img {
       border:none;
       height: 30px;
       opacity: 0.25;
@@ -142,7 +142,7 @@ body > header h2 {
       -o-transition: opacity 0.2s ease-in-out;
       transition: opacity 0.2s ease-in-out;}
 
-    ul#share li a:hover img{
+    ul.share li a:hover img{
       opacity: 1;
       filter: alpha(opacity=100);}
 

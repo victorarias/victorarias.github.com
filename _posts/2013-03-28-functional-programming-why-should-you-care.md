@@ -3,6 +3,7 @@ layout: post
 title: Functional Programming - Why Should You Care?
 keywords: ",cousera, functional programming, Functional Programming, Scala"
 location: São Paulo
+short_url: http://goo.gl/JLZP3
 ---
 
 

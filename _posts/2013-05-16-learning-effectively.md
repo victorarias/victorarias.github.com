@@ -3,6 +3,7 @@ layout: post
 title: Learning Effectively - The Path To Expertise
 keywords: "learning,dreyfus,effectively,expert,deliberate practice,pragmatic"
 location: São Paulo
+short_url: http://goo.gl/KPb33
 ---
 
 **"Learning is not compulsory... neither is survival." (W. Edwards Deming)**

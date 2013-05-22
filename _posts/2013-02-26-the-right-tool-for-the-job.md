@@ -3,6 +3,7 @@ layout: post
 title: The Right Tool For The Job
 keywords: "mongodb,postgresql,mysql,relational,rails,denormalization,transactions"
 location: São Paulo
+short_url: http://goo.gl/80l4u
 ---
 
 I’ve been working on a new project for the past three weeks: It’s a kind of an e-commerce that sells advertisement space. The reason that motivated this post was the database chosen: MongoDB.
