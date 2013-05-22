@@ -4,13 +4,15 @@ comments: true
 ---
 
 <section id="post">
-	<header>
-		<h1>{{ page.title }}</h1>
+	<article class="entry-post">
+		<div class="entry-title">
+			<h1>{{ page.title }}</h1>
+			<time datetime="{{ page.date }}" pubdate>{{ page.date | date: "%d %b %Y" }} - {{ page.location }}</time>
+		</div>
 
-		<time datetime="{{ page.date }}" pubdate>{{ page.date | date: "%d %b %Y" }} - {{ page.location }}</time>
-	</header>
-	<article>
-		{{ content }}
+		<div class="entry-content">
+			{{ content }}
+		</div>
 	</article>
 </section>
 
