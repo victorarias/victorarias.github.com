@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "Tests Are Your Best Friend: Do Not Neglect Them"
+title: "Tests Are Your Best Friends: Do Not Neglect Them"
 keywords: "tdd,test driven development,tests,automated tests,automation,broken windows,legacy code"
 location: São Paulo
 short_url: http://goo.gl/qxGAk
 ---
 
-
-
-In the last 2 years I worked at a company that fully embrace **Test Driven Development** (TDD) and automated testing in general. During that time no one around me questioned it: I had to create automated tests for every production code I wrote, and it had to be done preferably through TDD. The people from there even used to say that "code written without TDD isn't a professional one".
+In the last 2 years I worked at a company that fully embraced **Test Driven Development** (TDD) and automated testing in general. During that time no one around me questioned it: I had to create automated tests for every production code I wrote, and it had to be done preferably through TDD. The people from there even used to say that "code written without TDD isn't a professional one".
 
 I must say that I disagree with the whole "TDD Is The Only True Way" story, but I thoroughly  believe in something closely related: ***"production code without automated tests isn't a professional one".***
 
