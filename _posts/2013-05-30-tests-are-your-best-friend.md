@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tests Are Your Best Friends: Do Not Neglect Them"
-keywords: "tdd,test driven development,tests,automated tests,automation,broken windows,legacy code"
+keywords: ",tdd,test driven development,tests,automated tests,automation,broken windows,legacy code"
 location: São Paulo
 short_url: http://goo.gl/qxGAk
 ---
