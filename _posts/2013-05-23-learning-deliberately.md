@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning Deliberately
-keywords: "learning,dreyfus,SMART objectives,active investment plan,deliberate practice,deliberate,programming,mind maps,sq3r,reading,test driven learning,mastery,expert,expertise,skills"
+keywords: ",learning,dreyfus,SMART objectives,active investment plan,deliberate practice,deliberate,programming,mind maps,sq3r,reading,test driven learning,mastery,expert,expertise,skills"
 location: São Paulo
 short_url: http://goo.gl/hkD88
 ---
