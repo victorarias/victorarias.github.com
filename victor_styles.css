@@ -160,6 +160,12 @@ body > header h2 {
   section#container {width: 75%;}
 }
 
+/* PAGINATION */
+.pagination {font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 15px;
+  text-align: center;
+}
+
 /* FOOTER */
 footer {width: 100%; background-color: #20b0ca; padding: 2em 0;}
 
