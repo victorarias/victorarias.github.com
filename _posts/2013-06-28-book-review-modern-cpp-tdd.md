@@ -16,7 +16,7 @@ However, [Jeff Langr](http://langrsoft.com/) published a beta version of his boo
 
 <div class="thumb">
   <a href="/images/2013-06-28/book.jpg" target="_blank">
-    <img class="center simple-border" src="/images/2013-06-28/book.jpg" alt="screenshot"/>
+    <img class="center simple-border" src="http://www.victorarias.com.br/images/2013-06-28/book.jpg" alt="screenshot"/>
   </a>
 </div>
 
