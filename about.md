@@ -3,12 +3,6 @@ layout: about
 title: Hi!
 ---
 
-I’m a geek who learned, around 10 years ago, to program trying to create a fun non-official Ultima Online server. This “adventure” showed me my passion: software development. 
+I'm a multidisciplinary software developer from Brazil, passionate about coding both back and front-end stuff with Ruby, Javascript, Java, C++, C#, Scala or whatever is necessary.
 
-Not long after that, I started working as a software developer and I’ve been doing this since then, dealing mainly with the .NET plataform, JavaScript and Ruby/Rails, but I’ve already made some stuff with C++, Python and Java. I usually work with the whole stack of development (back and front-end), but I enjoy working more with backend infrastructure. Despite being more experienced with some technologies I'm already used to learn very fast and adapt myself to work with anything related to programming.
-
-Nowadays I’m a senior consultant at a Brazilian company called Lambda3. We develop software for startups, give development and agile courses and give assistance to other companies with specialized consulting. I try to help with every aspect of the company, however my main responsibility is to develop software for our customers and help other developers to improve themselves.
-
-On my personal side I spend most of my time studying code design, programming languages (mainly C++ now) and algorithms, but I’ve been also focusing on improving my English and learning Swedish.
-
-You can ask: why Swedish? It’s easy: I want to live in Sweden! So if you’re from there and/or know someone who is looking for a great developer, or if you can help me with that, send me an e-mail: <arias.sp@gmail.com>. I’d be very pleased :-)
+Oh! Besides programming I'm also studying Swedish. You can ask: why Swedish? It’s easy: I want to live in Sweden! So if you’re from there and/or know someone who is looking for a great developer, or if you can help me with that, send me an e-mail: <arias.sp@gmail.com>. I’d be very pleased :-)
