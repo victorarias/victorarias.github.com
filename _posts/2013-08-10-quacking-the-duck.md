@@ -10,6 +10,8 @@ Duck typing is the "feature" that I currently like the most in Ruby, mainly beca
 
 <!-- more -->
 
+*Edit: I realized that I should have made myself clear that dynamic languages aren't silver bullets and can be dangerous. Because of that I appended a new section in this post to talk about it.*
+
 <img alt="duck typing" style="float:right; margin: 20px 0 5px 15px;" src="/images/duck_typing.jpg"/>
 
 I know Ruby is a "duck type language" since I first read about it, but my background with statically compiled languages prevented me to really understand what duck typing really mean - at least in Ruby. The theory is very simple: if you're designing a method that is expecting a parameter Duck to then send it a message called "quack", any kind of object that respond to "quack" could be passed to it - the type of the parameter isn't important. The obvious conclusion is that if you create the class Dog that implements the method "quack" (a very odd dog), it's perfectly acceptable to pass an instance of Dog to the previous method. It's cool and etc., but it doesn't really makes a big difference, right? At least it was what I thought for a considerably period of time :-(
@@ -55,6 +57,15 @@ As you can see, Ruby's standard library is filled with <img alt="love" style="wi
 ##Refactoring
 
 The most obvious but worth mention consequence of duck typing is how it makes refactoring easier: the ["Replace Conditional with Polymorphism"](http://www.refactoring.com/catalog/replaceConditionalWithPolymorphism.html) and ["Replace Type Code with Strategy/State"](http://www.refactoring.com/catalog/replaceTypeCodeWithStateStrategy.html) refactorings, just to name a few, are much simpler and fast to do when you don't have to care about types, but only about behavior.
+
+##The Dark Side
+
+*appended section*
+
+Not having a compiler to watch your back can be dangerous. A professional Ruby programmer **(1)** shall never forget that he or she have the responsibility to test the codebase and assert its behavior, and **(2)** have to write clean code and refactor smells. Ruby code must always be well-written, otherwise the risk of a debugging nightmare is just too high.
+
+Also, dynamic languages are best suited for small-to-mid-sized software. My experience showed me that is better to split applications into smaller ones when they become too complex, and this practice is even more important when dealing with dynamic languages - a reddit user made the point of having to rename a function used across a 100k LOC codebase, and I just can't say that it is easy to accomplish that. Dealing with a **published** interface is just hard - sometimes is better to just "mark it" as obsolete.
+
 
 ##Conclusion
 
