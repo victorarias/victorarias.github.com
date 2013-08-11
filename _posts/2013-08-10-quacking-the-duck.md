@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Quacking The Chicken"
+title: "Quacking The Dog - Duck typing for happiness"
 keywords: "ruby,duck typing,object oriented design,code design"
 location: São Paulo
 short_url: http://goo.gl/N2ga9e
 ---
 
-Duck typing is the feature that I currently like the most in Ruby, mainly because it makes it easier to create well-designed code - after all, you don't need to worry about the type system: your focus is on the message you're sending and the kind of role the object you're interacting with can assume.
+Duck typing is the "feature" that I currently like the most in Ruby, mainly because it makes it easier to create well-designed code - after all, you don't need to worry about the type system: your focus is on the message you're sending and the kind of role the object you're interacting with can assume.
 
 <!-- more -->
 
 <img alt="duck typing" style="float:right; margin: 20px 0 5px 15px;" src="/images/duck_typing.jpg"/>
 
-I know Ruby is a "duck type language" since I first read about it, but my background with statically compiled languages prevented me to really understand what duck typing really mean - at least in Ruby. The theory is very simple: if you're designing a method that is expecting a parameter Duck to then send it a message called "quack", any kind of object that respond to "quack" could be passed to it - the type of the parameter isn't important. The obvious conclusion is that if you create the class Chicken that implements the method "quack" (a very odd chicken), it's perfectly acceptable to pass an instance of Chicken to the previous method. It's cool and etc., but it doesn't really makes a big difference, right? At least it was what I thought for a considerably period of time :-(
+I know Ruby is a "duck type language" since I first read about it, but my background with statically compiled languages prevented me to really understand what duck typing really mean - at least in Ruby. The theory is very simple: if you're designing a method that is expecting a parameter Duck to then send it a message called "quack", any kind of object that respond to "quack" could be passed to it - the type of the parameter isn't important. The obvious conclusion is that if you create the class Dog that implements the method "quack" (a very odd dog), it's perfectly acceptable to pass an instance of Dog to the previous method. It's cool and etc., but it doesn't really makes a big difference, right? At least it was what I thought for a considerably period of time :-(
 
 
 The power of duck typing struck me when I realized that it enables a very strong relation between objects, empowering APIs/models and reducing noise in code. To illustrate this, let me show you some examples from the Ruby Standard Library.
