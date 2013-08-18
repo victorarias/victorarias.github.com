@@ -14,7 +14,7 @@ But first, just to be clear: _if there was a book called ["Ruby: The Good Parts"
 
 ##Extending Types
 
-One of the most famous features from Ruby is monkey patching. Everyone knows it, a lot of people hates it. Besides all the drama, monkey patching can be very useful in some scenarios like, for instance, applying a temporary patch to fix an annoying bug inside that gem that you love so much (and still isn't distributed with the fix). 
+One of the most famous features from Ruby is monkey patching. Everyone knows it, a lot of people hate it. Besides all the drama, monkey patching can be very useful in some scenarios like, for instance, applying a temporary patch to fix an annoying bug inside that gem that you love so much (and still isn't distributed with the fix). 
 
 The code below illustrate how easy is to monkey patch something:
 
@@ -36,7 +36,7 @@ puts 2.power_of_two               # => 4
 
 Another great use of monkey patching is to customize behavior from code that you do not own, like for instance from a gem. Although useful, this kind of hacking can be dangerous: no one besides you expects the custom behavior, and this can lead to some hard debugging and a lot of frustration. My recommendation: **do it only when there is no other option, and start looking for an alternative** - I would, for example, talk to the gem author to try to find a better way to solve the problem. This can be a great opportunity to contribute with a Pull Request!
 
-One last thing before moving to the next (and best in my humble opinion) part: **Do not extend Ruby core classes!** [Monkey patching types like String is a very bad thing to do](http://brainspec.com/blog/2013/08/09/make-love-not-ruby-core-extensions/). A safer way to deal with problems that need core type extensions could be through decorators!
+One last thing before moving to the next (and best in my humble opinion) part: **Do not extend Ruby core classes!** [Monkey patching types like String is a very bad thing to do](http://brainspec.com/blog/2013/08/09/make-love-not-ruby-core-extensions/). A safer way to deal with problems that need core type extensions could be through decorators.
 
 ##Decoration
 
@@ -74,7 +74,7 @@ The *SimpleDelegator* class delegates every call to the object passed into the c
 
 [The decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern) is a extremely valuable tool that every developer should have in his/hers pocket - decorators are a great way of extending behavior without increasing the complexity of the original code. The fact that it costs almost nothing to decorate something with Ruby really blows my mind - the technique above can be a great lightweight way of extending models with presenting behavior to DRY up your views by making them logic-less.
 
-There is many ways to decorate objects in Ruby, and a better way is through modules and the extend method:
+There are many ways to decorate objects in Ruby, and a better one is through modules and the extend method:
 
 {% highlight ruby %}
 
@@ -106,7 +106,7 @@ This technique is even more powerful. With it you're actually changing the objec
 
 Code extension and decorators are a very extensive subject, but I hope with this post I could bring something new to people who's starting with the language or who don't know some of its no-so-trivial features. See ya!
 
-*OBS: Ruby 2.0 is packed with a feature called "Refinements" that improves the way of how monkey patching can be made, but it's still a experimental feature and I consciously omitted it here because of that.*
+*OBS: Ruby 2.0 is packaged with a feature called "Refinements" that improves the way of how monkey patching can be made, but it's still a experimental feature and I consciously omitted it here because of that.*
 
 
 
