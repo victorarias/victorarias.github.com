@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Extending Ruby Types - Ruby Love Part 1"
-keywords: ""
+keywords: "ruby,extension,decoration,monkey patching,patching,decorators,ruby love"
 location: São Paulo
-short_url: 
+short_url: http://goo.gl/8cLYkm
 ---
 
 In my last post I wrote about a "bad part" of Ruby: [how easily can it be to "leaky" memory with Ruby](http://victorarias.com.br/2013/08/13/leaky-ruby.html). Although that's true, Ruby is a **GREAT** language and because of that, I decided to write a series of posts about topics that I like the most in it. Today I'm starting with how to extend classes and types.
