@@ -58,11 +58,103 @@ The main files are listed below:
 
 Let’s take a look at the commented implementation of both implementations:
 
-<script src="https://gist.github.com/victorarias/5163882.js">
-</script>
+{% highlight javascript %}
 
-<script src="https://gist.github.com/victorarias/5164279.js">
-</script>
+function SimpleCollisionSystem() {
+  this.update = function update() {
+    for(var a = 0; a < this.circles.length; a++) {
+      var circle1 = this.circles[a];
+  
+      //n * n/2 loop to check for collisions on every other particle
+      for(var b = a + 1; b < this.circles.length; b++) {
+        var circle2 = this.circles[b];
+  
+        circle1.checkCollisionOnAnotherCircle(circle2);
+      }
+  
+      circle1.move(); //"walk" the particle
+      //check for collisions on the canvas border
+      circle1.checkCollisionOnX(this.canvas.width);
+      circle1.checkCollisionOnY(this.canvas.height);
+    }
+  }
+}
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+function CoolCollisionSystem() {
+  this.currentTime = 0;
+  this.pq = new PriorityQueue(eventComparator);
+ 
+  //warmup happens only at startup (duh), to predict collisions between every particle
+  //this is the only n^2 loop
+  this.warmUp = function() {
+    for(var i = 0, length = this.circles.length; i < length; i++) {
+      this.predict(this.circles[i]);
+    }
+    this.redraw();
+  };
+ 
+  //predict future collisions and insert then inside the priority queue
+  this.predict = function(circle) {
+    if(!circle) return;
+ 
+    for(var i = 0, length = this.circles.length; i < length; i++) {
+      var circleToHit = this.circles[i];
+      var dt = circle.timeToHit(circleToHit);
+      //the if below is an optimization to avoid distant predictions that will probably never happen
+      if(dt > 0 && dt < this.circles.length/2) 
+        this.pq.enqueue(new Event(this.currentTime + dt, circle, circleToHit));
+    }
+ 
+    var dtX = circle.timeToHitVerticalWall(this.canvas.width);
+    var dtY = circle.timeToHitHorizontalWall(this.canvas.height);
+ 
+    this.pq.enqueue(new Event(this.currentTime + dtX, circle, null));
+    this.pq.enqueue(new Event(this.currentTime + dtY, null, circle));
+  };
+ 
+  //"hack" to keep the drawing away of the main loop
+  //this is necessary because drawing is also an event like a collision
+  this.oldDraw = this.draw;
+  this.draw = function(){};
+  this.redraw = function() {
+    this.oldDraw();
+    this.pq.enqueue(new Event(this.currentTime + .1, null, null));
+  };
+ 
+  this.update = function() {
+    //first we must find a valid event
+    var e = this.pq.dequeue();
+ 
+    while(!e.isValid())
+      e = this.pq.dequeue();
+ 
+    var a = e.circleA;
+    var b = e.circleB;
+    
+    //"move" every particle to the moment of the selected event
+    for(var i = 0, length = this.circles.length; i < length; i++) {
+      this.circles[i].move(e.time - this.currentTime, this.canvas.width, this.canvas.height);
+    }
+    this.currentTime = e.time;
+ 
+    //do the collision or just redraw
+    if(a && b) a.bounceOff(b);
+    else if(a && !b) a.bounceOffVerticalWall();
+    else if(!a && b) b.bounceOffHorizontalWall();
+    else { this.redraw(); }
+ 
+    //predict new collisions with the event particles (if any)
+    this.predict(a);
+    this.predict(b);
+  };
+}
+
+{% endhighlight %}
+
 
 These implementations have very different performance considerations. Let’s look first at some raw numbers:
 

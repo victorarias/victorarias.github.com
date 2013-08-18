@@ -23,34 +23,147 @@ The power of duck typing struck me when I realized that it enables a very strong
 
 *File.open("path/to/file")* is a very common idiom to create streams to read a file: you pass the **path** and the library returns an object that can read the file. Did you notice how I highlighted the word "path"? It isn't by chance - the *'open'* function really expects something that fit the role of a path, not just a string containing a location. The difference is subtle, but it allows us to write code like this:
 
-<script src="https://gist.github.com/victorarias/6198934.js">
-</script>
+{% highlight ruby %}
+
+class VimConfig
+  # ... behavior ... #	
+  
+  def to_path
+    "~/.vimrc"
+  end
+end
+
+config = VimConfig.new
+config_file = File.open config
+
+{% endhighlight %}
 
 Nice, isn't it? The Ruby's File API converts its parameters before using it, and one of these conversions is through the *'to_path'* idiom. If you're curious how, below is the C code that does it (*'rb_f_open'* calls *'FilePathValue'* which consequently calls *'rb_get_path_check_to_string'*):
 
-<script src="https://gist.github.com/victorarias/6198940.js">
-</script>
+{% highlight c %}
+
+static VALUE
+rb_f_open(int argc, VALUE *argv)
+{
+    ID to_open = 0;
+    int redirect = FALSE;
+ 
+    if (argc >= 1) {
+  CONST_ID(to_open, "to_open");
+	if (rb_respond_to(argv[0], to_open)) {
+	    redirect = TRUE;
+	}
+	else {
+	    VALUE tmp = argv[0];
+	    FilePathValue(tmp);
+	    if (NIL_P(tmp)) {
+		redirect = TRUE;
+	    }
+	    else {
+                VALUE cmd = check_pipe_command(tmp);
+                if (!NIL_P(cmd)) {
+		    argv[0] = cmd;
+		    return rb_io_s_popen(argc, argv, rb_cIO);
+		}
+	    }
+	}
+    }
+    if (redirect) {
+	VALUE io = rb_funcall2(argv[0], to_open, argc-1, argv+1);
+ 
+	if (rb_block_given_p()) {
+	    return rb_ensure(rb_yield, io, io_close, io);
+	}
+	return io;
+    }
+    return rb_io_s_open(argc, argv, rb_cFile);
+}
+ 
+VALUE
+rb_get_path_check_to_string(VALUE obj, int level)
+{
+    VALUE tmp;
+    ID to_path;
+ 
+    if (insecure_obj_p(obj, level)) {
+	rb_insecure_operation();
+    }
+ 
+    if (RB_TYPE_P(obj, T_STRING)) {
+	return obj;
+    }
+    CONST_ID(to_path, "to_path");
+    //to_path call!
+    tmp = rb_check_funcall(obj, to_path, 0, 0);
+    if (tmp == Qundef) {
+	tmp = obj;
+    }
+    StringValue(tmp);
+    return tmp;
+}
+
+{% endhighlight %}
 
 ## Array indexer
 
 The array indexer *(a_array\[index\])* is another example of rich API: it calls *'to_int'* on the indexer, so any object that answers to *to_int* can be used. This enables code like this:
 
-<script src="https://gist.github.com/victorarias/6198944.js">
-</script>
+{% highlight ruby %}
+
+class PodiumPosition
+  # .. behavior .. #
+  def to_int
+    @race_position
+  end
+end
+ 
+position = PodiumPosition.new(1)
+prizes = [ "orange", "apple", "corn" ]
+puts "Congrats, you won #{prizes[position]}"
+
+{% endhighlight %}
 
 ##IO.select
 
 It was through the *IO.select* API that I first saw Ruby's power. This API calls the *select(2)* system API that receives file descriptors and blocks the current thread until one or more of the file descriptors become ready for an IO operation. The Ruby API is defined as above:
+
+{% highlight ruby %}
 
 	select(read_array
 		[, write_array
 		[, error_array
 		[, timeout]]]) → array or nil
 
+{% endhighlight %}
+
 So, basically you can pass an array of streams and "select" will block the calling thread until the streams are ready to be read or written (errors or timeouts aren't important right now). The problem is: when you are dealing with streams you often store them inside meaningful objects with behavior (like a Connection class on a networking code), hiding the IO object from the rest of the application (encapsulation!). How can a Reactor core (from the [Reactor Pattern](http://en.wikipedia.org/wiki/Reactor_pattern)), for instance, pass a stream to the *'select'* API? Should it break the encapsulation and map the objects? Obviously no! *'to_io'* conversion method to the rescue!
 
-<script src="https://gist.github.com/victorarias/6198945.js">
-</script>
+{% highlight ruby %}
+
+class Connection
+  # .. rest of the class .. #
+ 
+  def accept_connection(io)
+    @io = io
+ 
+    # new connection code
+  end
+ 
+  def to_io
+    @io
+  end
+end 
+ 
+class Reactor
+  # array_of_connections_to_read is an array of instances of the above Connection class
+  # array_of_connections_to_write is an array of instances of the above Connection class
+ 
+  def tick
+    to_read, to_write = IO.select(array_of_connections_to_read, array_of_connections_to_write)
+  end
+end
+
+{% endhighlight %}
 
 As you can see, Ruby's standard library is filled with <img alt="love" style="width: 32px;" src="http://www.victorarias.com.br/images/heart.png"/>.
 
